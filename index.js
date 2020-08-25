@@ -1,7 +1,7 @@
 const {MajorColors,MinorColors} = require("./minor_major_color");
 const GetColorFromPairNumber = require("./colorFromPairNumber.js");
 
-function ToString(){
+function toString(){
     let color_number_combination = {};
     let manual_string = "Number" + " "+ "Major" + " "+ "Minor" +"\n";
     let pair_number = 1;
