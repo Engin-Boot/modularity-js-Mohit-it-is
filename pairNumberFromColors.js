@@ -1,5 +1,5 @@
-var MajorColors = require("./minor_major_color").MajorColors;
-var MinorColors = require("./minor_major_color").MinorColors;
+const {MajorColors,MinorColors} = require("./minor_major_color");
+
 
 function GetPairNumberFromColors(majorColor, minorColor) {
     let majorIndex = 0;
