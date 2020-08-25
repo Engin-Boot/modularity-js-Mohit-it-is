@@ -4,12 +4,14 @@ const GetColorFromPairNumber = require("./colorFromPairNumber.js");
 
 function ToString(){
     let color_number_combination = {};
+    let manual_string = "Number" + " "+ "Major" + " "+ "Minor" +"\n";
     let pair_number = 1;
     for(pair_number=1; pair_number<=25;pair_number++){
-        //color_number_combination["number_" + pair_number] = pair_number;
-        color_number_combination["pair_number = "+pair_number] = GetColorFromPairNumber(pair_number);
+        color_number_combination = GetColorFromPairNumber(pair_number);
+        manual_string += "  "+pair_number +" : " + color_number_combination.major+" " 
+                            + color_number_combination.minor +"\n";
     }
-    return color_number_combination;
+    return manual_string;
 }
 
 module.exports = ToString;

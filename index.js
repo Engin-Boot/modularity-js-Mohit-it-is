@@ -1,10 +1,9 @@
 var testColorToNumber = require("./testColortoNumber.js");
 var testNumberToPair = require("./testNumbertoPair.js");
 const codingManual = require("./codingManual.js");
+const ToString = require("./codingManual.js");
 
-
-//console.log(codingManual()); //outputs Manual
-
+//console.log(ToString());
 console.log("color coder");
 testNumberToPair(4, "white", "brown");
 testNumberToPair(25, "violet", "slate");
