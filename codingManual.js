@@ -1,5 +1,5 @@
-var MinorColors = require("./minorcolor.js");
-var MajorColors = require("./majorcolors.js");
+var MajorColors = require("./minor_major_color").MajorColors;
+var MinorColors = require("./minor_major_color").MinorColors;
 const GetColorFromPairNumber = require("./colorFromPairNumber.js");
 
 function ToString(){
