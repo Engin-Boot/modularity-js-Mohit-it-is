@@ -16,3 +16,7 @@ function testNumberToPair(number, expectedMajor, expectedMinor) {
     expect(pairOfColors.major).equals(expectedMajor);
     expect(pairOfColors.minor).equals(expectedMinor);
 }
+module.exports ={
+    testColorToNumber,
+    testNumberToPair
+};
