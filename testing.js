@@ -1,9 +1,10 @@
 const expect = require('chai').expect;
-const GetPairNumberFromColors = require("./pairNumberFromColors.js");
-const GetColorFromPairNumber = require("./colorFromPairNumber.js");
+const getPairNumberFromColors = require("./pairNumberFromColors.js");
+const getColorFromPairNumber = require("./colorFromPairNumber.js");
 
+(function() {
 function testColorToNumber(majorColor, minorColor, expectedNumber) {
-    const pairNumber = GetPairNumberFromColors(majorColor, minorColor);
+    const pairNumber = getPairNumberFromColors(majorColor, minorColor);
     console.log(`${majorColor} ${minorColor} = ${pairNumber}`);
     expect(pairNumber).to.equal(expectedNumber);
 }
@@ -11,12 +12,14 @@ function testColorToNumber(majorColor, minorColor, expectedNumber) {
 
 
 function testNumberToPair(number, expectedMajor, expectedMinor) {
-    const pairOfColors = GetColorFromPairNumber(number);
+    const pairOfColors = getColorFromPairNumber(number);
     console.log(`${number} = ${expectedMajor} ${expectedMinor}`);
     expect(pairOfColors.major).equals(expectedMajor);
     expect(pairOfColors.minor).equals(expectedMinor);
 }
-module.exports ={
-    testColorToNumber,
-    testNumberToPair
-};
+
+console.log("color coder");
+testNumberToPair(4, "white", "brown");
+testNumberToPair(25, "violet", "slate");
+testColorToNumber("black", "brown", 14);
+testColorToNumber("yellow", "green", 18); })();
